@@ -15,82 +15,102 @@ function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner">
-          {/* left: copy */}
+          {/* LEFT CONTENT */}
           <div className="hero-copy">
             <h1 className="hero-title">
               Eat smarter with <span>Caliber</span>
             </h1>
+
             <p className="hero-sub">
               Detect food items in seconds and build a lifestyle plan that fits your day.
             </p>
 
-           
-
             <ul className="chips">
-              <li> Instant food detection</li>
-              <li> PCOD-friendly swaps</li>
-              <li> Macro guidance</li>
+              <li>Instant food detection</li>
+              <li>PCOD-friendly swaps</li>
+              <li>Macro guidance</li>
               <li>Actionable AI tips</li>
             </ul>
           </div>
 
-          {/* right: robot illustration */}
-          <div className="hero-art" aria-hidden="true">
+          {/* RIGHT CHARACTER */}
+          <div className="hero-art" style={{ position: "relative" }}>
             <span className="hero-glow"></span>
-            {/* inline SVG robot */}
-            <svg className="robo" viewBox="0 0 220 220" role="img" aria-label="Caliber robot">
-              <defs>
-                <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0" stopColor="#dbeaff" />
-                  <stop offset="1" stopColor="#eef6ff" />
-                </linearGradient>
-              </defs>
 
-              {/* body */}
-              <rect x="45" y="70" width="130" height="100" rx="18" fill="url(#g1)" stroke="#cfe0ff" />
-              {/* face */}
-              <rect x="60" y="85" width="100" height="50" rx="12" fill="#fff" stroke="#d9e6ff" />
-              {/* eyes */}
-              <circle cx="88" cy="110" r="8" fill="#0a58ca" />
-              <circle cx="132" cy="110" r="8" fill="#0a58ca" />
-              {/* smile */}
-              <path d="M85 124 Q110 138 135 124" fill="none" stroke="#7aa7ff" strokeWidth="4" strokeLinecap="round"/>
+            {/* Speech Bubble */}
+            <div
+              style={{
+                position: "absolute",
+                top: "-20px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                background: "white",
+                padding: "12px 20px",
+                borderRadius: "20px",
+                boxShadow: "0 8px 24px rgba(10,88,202,0.15)",
+                border: "2px solid #bfdbfe",
+                fontSize: "16px",
+                fontWeight: 700,
+                color: "#0a58ca",
+                zIndex: 10
+              }}
+            >
+              Hi, Welcome to Caliber! 👋
+            </div>
 
-              {/* antenna */}
-              <line x1="110" y1="60" x2="110" y2="40" stroke="#9bbcff" strokeWidth="5" strokeLinecap="round"/>
-              <circle cx="110" cy="34" r="8" fill="#0a58ca"/>
-              <circle className="blink" cx="110" cy="34" r="3" fill="#fff"/>
-
-              {/* arms */}
-              <rect x="25" y="95" width="20" height="60" rx="10" fill="#eaf2ff" stroke="#d7e7ff"/>
-              <rect x="175" y="95" width="20" height="60" rx="10" fill="#eaf2ff" stroke="#d7e7ff"/>
-
-              {/* chest badge */}
-              <rect x="92" y="140" width="36" height="18" rx="9" fill="#0a58ca" opacity=".9"/>
-              <circle cx="100" cy="149" r="4" fill="#fff"/>
-              <rect x="108" y="146" width="16" height="6" rx="3" fill="#fff" opacity=".9"/>
+            {/* Friendly Robot */}
+            <svg className="robo" viewBox="0 0 200 220" style={{width: '280px', height: '280px'}}>
+              {/* Antenna */}
+              <line x1="100" y1="20" x2="100" y2="40" stroke="#0a58ca" strokeWidth="3" strokeLinecap="round"/>
+              <circle cx="100" cy="15" r="6" fill="#0a58ca"/>
+              
+              {/* Head */}
+              <rect x="60" y="40" width="80" height="60" rx="15" fill="white" stroke="#60a5fa" strokeWidth="3"/>
+              
+              {/* Eyes */}
+              <circle cx="80" cy="65" r="8" fill="#0a58ca"/>
+              <circle cx="120" cy="65" r="8" fill="#0a58ca"/>
+              
+              {/* Smile */}
+              <path d="M 75 85 Q 100 92 125 85" stroke="#60a5fa" strokeWidth="3" fill="none" strokeLinecap="round"/>
+              
+              {/* Body */}
+              <rect x="50" y="110" width="100" height="90" rx="20" fill="#e0f2fe" stroke="#60a5fa" strokeWidth="3"/>
+              
+              {/* Body detail - horizontal line */}
+              <line x1="70" y1="155" x2="130" y2="155" stroke="#60a5fa" strokeWidth="2"/>
+              
+              {/* Left Arm & Hand */}
+              <circle cx="35" cy="140" r="15" fill="#90cdefff" stroke="#0a67d8ff" strokeWidth="2"/>
+              
+              {/* Right Arm & Hand */}
+              <circle cx="165" cy="140" r="15" fill="#90cde7ff" stroke="#0a67d8ff" strokeWidth="2"/>
             </svg>
           </div>
         </div>
       </section>
 
       {/* FEATURE GRID */}
-      <section className="grid" aria-label="Primary features">
-        <Link to="/camera" className="card" aria-label="Camera feature">
-          <div className="icon-bubble"><CamIcon size={22} color="#0a58ca" /></div>
+      <section className="grid">
+        <Link to="/camera" className="card">
+          <div className="icon-bubble">
+            <CamIcon size={22} color="#0a58ca" />
+          </div>
           <h3>Camera</h3>
           <p>Scan a meal to estimate ingredients, macros and calories.</p>
         </Link>
 
-        <Link to="/lifestyle" className="card" aria-label="Lifestyle feature">
-          <div className="icon-bubble"><Leaf size={22} color="#0a58ca" /></div>
+        <Link to="/lifestyle" className="card">
+          <div className="icon-bubble">
+            <Leaf size={22} color="#0a58ca" />
+          </div>
           <h3>Lifestyle</h3>
           <p>Daily routines, PCOD-friendly plans and stress-free diet nudges.</p>
         </Link>
       </section>
 
-      {/* QUICK STATS */}
-      <section className="stats" aria-label="App stats">
+      {/* STATS */}
+      <section className="stats">
         <div className="pill"><span>10k+</span> foods recognized</div>
         <div className="pill"><span>92%</span> benchmark accuracy</div>
         <div className="pill"><span>24/7</span> guidance</div>
@@ -103,19 +123,15 @@ function Home() {
 export default function App() {
   return (
     <div className="app">
-      {/* Glassy navbar */}
       <header className="nav">
         <div className="nav-inner">
-          <Link to="/" className="brand" aria-label="Caliber home">
+          <Link to="/" className="brand">
             <span className="dot" /> Caliber
           </Link>
 
-          <nav className="nav-links" aria-label="Primary">
+          <nav className="nav-links">
             <Link to="/camera">Camera</Link>
             <Link to="/lifestyle">Lifestyle</Link>
-            <a className="link-muted" href="https://example.com/docs" target="_blank" rel="noreferrer">
-              Docs
-            </a>
           </nav>
         </div>
       </header>
@@ -127,18 +143,10 @@ export default function App() {
         <Route path="/lifestyle/:slug" element={<Category />} />
       </Routes>
 
-      {/* Floating chat (bottom-right) */}
       <ChatWidget />
 
-      {/* Footer */}
       <footer className="site-footer">
-        <div className="footer-inner">
-          <p>© {new Date().getFullYear()} Caliber Chatbot </p>
-          <div className="footer-links">
-            <a href="https://example.com/privacy" target="_blank" rel="noreferrer">Privacy</a>
-            <a href="https://example.com/terms" target="_blank" rel="noreferrer">Terms</a>
-          </div>
-        </div>
+        <p>© {new Date().getFullYear()} Caliber Chatbot</p>
       </footer>
     </div>
   );

@@ -10,6 +10,7 @@ const DATA = {
       { 
         name: "Spinach", 
         emoji: "🥬",
+        image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400&h=300&fit=crop",
         description: "Spinach is a nutrient powerhouse rich in iron, calcium, vitamins A, C, and K. Perfect for PCOD management as it helps reduce inflammation and supports hormonal balance.",
         benefits: ["High in iron - prevents anemia", "Low glycemic index", "Rich in antioxidants", "Supports bone health", "Anti-inflammatory properties"],
         howToEat: ["Add to smoothies", "Sauté with garlic", "Mix in dal or curry", "Make palak paneer"],
@@ -18,6 +19,7 @@ const DATA = {
       { 
         name: "Broccoli", 
         emoji: "🥦",
+        image: "https://images.unsplash.com/photo-1628773822503-930a7eaecf80?w=400&h=300&fit=crop",
         description: "Broccoli is a cruciferous vegetable packed with vitamins C and K, fiber, and powerful antioxidants. It's excellent for detoxification and hormone balance.",
         benefits: ["Supports liver detoxification", "High in fiber", "Rich in vitamin C", "Anti-cancer properties", "Helps hormonal balance"],
         howToEat: ["Steam lightly", "Roast with olive oil", "Add to stir-fries", "Blend into soups"],
@@ -26,6 +28,7 @@ const DATA = {
       { 
         name: "Carrot", 
         emoji: "🥕",
+        image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&h=300&fit=crop",
         description: "Carrots are rich in beta-carotene, fiber, and antioxidants. They support eye health, skin health, and digestive wellness.",
         benefits: ["Excellent for eye health", "High in beta-carotene", "Good fiber source", "Supports skin health", "Boosts immunity"],
         howToEat: ["Eat raw as snacks", "Add to salads", "Make carrot juice", "Cook in curries"],
@@ -34,6 +37,7 @@ const DATA = {
       { 
         name: "Cucumber", 
         emoji: "🥒",
+        image: "https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=400&h=300&fit=crop",
         description: "Cucumber is 95% water, making it extremely hydrating. It's low in calories and helps with weight management and skin health.",
         benefits: ["Very hydrating", "Low in calories", "Supports weight loss", "Good for skin", "Anti-inflammatory"],
         howToEat: ["Eat raw in salads", "Make cucumber water", "Add to raita", "Juice with mint"],
@@ -42,6 +46,7 @@ const DATA = {
       { 
         name: "Tomato", 
         emoji: "🍅",
+        image: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400&h=300&fit=crop",
         description: "Tomatoes are rich in lycopene, a powerful antioxidant. They support heart health and have anti-cancer properties.",
         benefits: ["High in lycopene", "Heart healthy", "Rich in vitamin C", "Anti-cancer properties", "Supports skin health"],
         howToEat: ["Add to salads", "Make tomato soup", "Use in curries", "Eat raw with salt"],
@@ -57,6 +62,7 @@ const DATA = {
       { 
         name: "Apple", 
         emoji: "🍎",
+        image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400&h=300&fit=crop",
         description: "Apples are packed with fiber and vitamin C. They help regulate blood sugar and support digestive health.",
         benefits: ["High in fiber", "Supports digestion", "Helps control blood sugar", "Rich in antioxidants", "Good for heart health"],
         howToEat: ["Eat with skin", "Add to oatmeal", "Make smoothies", "Slice as snacks"],
@@ -65,6 +71,7 @@ const DATA = {
       { 
         name: "Banana", 
         emoji: "🍌",
+        image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=400&h=300&fit=crop",
         description: "Bananas are rich in potassium, vitamin B6, and provide quick energy. They support heart health and muscle function.",
         benefits: ["High in potassium", "Quick energy source", "Supports muscle function", "Good for digestion", "Mood booster"],
         howToEat: ["Eat as is", "Add to smoothies", "Mix with yogurt", "Pre-workout snack"],
@@ -73,6 +80,7 @@ const DATA = {
       { 
         name: "Orange", 
         emoji: "🍊",
+        image: "https://images.unsplash.com/photo-1547514701-42782101795e?w=400&h=300&fit=crop",
         description: "Oranges are excellent sources of vitamin C and fiber. They boost immunity and support skin health.",
         benefits: ["Very high in vitamin C", "Boosts immunity", "Supports skin health", "High in fiber", "Anti-inflammatory"],
         howToEat: ["Eat fresh segments", "Make fresh juice", "Add to salads", "Eat whole fruit"],
@@ -81,6 +89,7 @@ const DATA = {
       { 
         name: "Berries", 
         emoji: "🫐",
+        image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=400&h=300&fit=crop",
         description: "Berries (blueberries, strawberries, raspberries) are antioxidant powerhouses with low glycemic index.",
         benefits: ["Highest antioxidants", "Low glycemic index", "Anti-inflammatory", "Brain health", "Heart healthy"],
         howToEat: ["Eat fresh", "Add to yogurt", "Blend in smoothies", "Top on oatmeal"],
@@ -89,6 +98,7 @@ const DATA = {
       { 
         name: "Guava", 
         emoji: "🍐",
+        image: "https://images.unsplash.com/photo-1536511132770-e5058c7e8c46?w=400&h=300&fit=crop",
         description: "Guava is rich in vitamin C, fiber, and has a low glycemic index. It's excellent for immunity and digestion.",
         benefits: ["Very high in vitamin C", "High fiber content", "Low glycemic index", "Supports digestion", "Boosts immunity"],
         howToEat: ["Eat with skin", "Sprinkle salt/chili", "Make juice", "Eat as snack"],
@@ -104,6 +114,7 @@ const DATA = {
       { 
         name: "Oats", 
         emoji: "🥣",
+        image: "https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?w=400&h=300&fit=crop",
         description: "Oats are whole grains rich in soluble fiber (beta-glucan) that helps lower cholesterol and control blood sugar.",
         benefits: ["High in soluble fiber", "Lowers cholesterol", "Controls blood sugar", "Supports weight loss", "Long-lasting energy"],
         howToEat: ["Make oatmeal", "Add to smoothies", "Make oat flour", "Overnight oats"],
@@ -112,6 +123,7 @@ const DATA = {
       { 
         name: "Brown Rice", 
         emoji: "🍚",
+        image: "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=400&h=300&fit=crop",
         description: "Brown rice is a whole grain that retains bran and germ, making it more nutritious than white rice.",
         benefits: ["High in fiber", "Rich in minerals", "Supports digestion", "Better than white rice", "Sustained energy"],
         howToEat: ["Cook as main grain", "Make brown rice khichdi", "Use in pulao", "Mix with vegetables"],
@@ -120,6 +132,7 @@ const DATA = {
       { 
         name: "Quinoa", 
         emoji: "🌾",
+        image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=300&fit=crop&q=80",
         description: "Quinoa is a complete protein containing all 9 essential amino acids. It's gluten-free and nutrient-dense.",
         benefits: ["Complete protein source", "Gluten-free", "High in fiber", "Rich in minerals", "Low glycemic index"],
         howToEat: ["Cook like rice", "Add to salads", "Make quinoa khichdi", "Use in breakfast bowls"],
@@ -128,6 +141,7 @@ const DATA = {
       { 
         name: "Ragi (Finger Millet)", 
         emoji: "🌾",
+        image: "https://images.pexels.com/photos/4110256/pexels-photo-4110256.jpeg?w=400&h=300&fit=crop",
         description: "Ragi is an ancient Indian grain extremely high in calcium and iron. Perfect for bone health and anemia.",
         benefits: ["Very high in calcium", "Rich in iron", "High fiber content", "Low glycemic index", "Gluten-free"],
         howToEat: ["Make ragi roti", "Ragi porridge", "Ragi dosa", "Mix in flour"],
@@ -136,6 +150,7 @@ const DATA = {
       { 
         name: "Whole Wheat", 
         emoji: "🌾",
+        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&h=300",
         description: "Whole wheat contains the entire grain kernel - bran, germ, and endosperm - providing more nutrients and fiber.",
         benefits: ["High in fiber", "Rich in B vitamins", "Supports digestion", "Better than refined flour", "Sustained energy"],
         howToEat: ["Make whole wheat roti", "Use in bread", "Make pasta", "Use in baking"],
@@ -151,6 +166,7 @@ const DATA = {
       { 
         name: "Eggs", 
         emoji: "🥚",
+        image: "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400&h=300&fit=crop",
         description: "Eggs are complete protein sources with all essential amino acids. They're rich in vitamins D, B12, and choline.",
         benefits: ["Complete protein", "Rich in vitamin D", "Brain health (choline)", "Supports muscle building", "Very satiating"],
         howToEat: ["Boiled eggs", "Scrambled", "Omelette with veggies", "Egg curry"],
@@ -159,6 +175,7 @@ const DATA = {
       { 
         name: "Dal (Lentils)", 
         emoji: "🫘",
+        image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=300&fit=crop",
         description: "Dal is a staple Indian protein source rich in protein, fiber, iron, and folate. It's affordable and versatile.",
         benefits: ["High in plant protein", "Rich in fiber", "Good iron source", "Budget-friendly", "Supports digestion"],
         howToEat: ["Make dal tadka", "Dal soup", "Mix with rice", "Make dal chilla"],
@@ -167,6 +184,7 @@ const DATA = {
       { 
         name: "Chickpeas", 
         emoji: "🫘",
+        image: "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&h=300&fit=crop",
         description: "Chickpeas (chana) are protein and fiber powerhouses. They help control blood sugar and support weight management.",
         benefits: ["High in protein & fiber", "Controls blood sugar", "Supports weight loss", "Rich in minerals", "Very filling"],
         howToEat: ["Boiled chana salad", "Chana curry", "Hummus", "Roasted snack"],
@@ -175,6 +193,7 @@ const DATA = {
       { 
         name: "Paneer", 
         emoji: "🧀",
+        image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
         description: "Paneer is Indian cottage cheese, rich in protein and calcium. It's a vegetarian protein favorite.",
         benefits: ["High in protein", "Rich in calcium", "Supports bone health", "Good for muscles", "Versatile ingredient"],
         howToEat: ["Paneer curry", "Grilled paneer", "Paneer tikka", "Add to salads"],
@@ -183,6 +202,7 @@ const DATA = {
       { 
         name: "Chicken (Lean)", 
         emoji: "🍗",
+        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&h=300&fit=crop",
         description: "Lean chicken breast is a high-quality protein source with low fat. It supports muscle building and weight management.",
         benefits: ["Very high in protein", "Low in fat", "Rich in B vitamins", "Supports muscle growth", "Versatile"],
         howToEat: ["Grilled chicken", "Chicken curry", "Chicken soup", "Stir-fried"],
@@ -198,6 +218,7 @@ const DATA = {
       { 
         name: "Milk", 
         emoji: "🥛",
+        image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&h=300&fit=crop",
         description: "Milk is a complete food rich in calcium, protein, vitamin D, and other essential nutrients.",
         benefits: ["High in calcium", "Good protein source", "Rich in vitamin D", "Supports bone health", "Versatile ingredient"],
         howToEat: ["Drink plain", "Add to tea/coffee", "Make smoothies", "Use in cooking"],
@@ -206,6 +227,7 @@ const DATA = {
       { 
         name: "Curd/Yogurt", 
         emoji: "🥣",
+        image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop",
         description: "Curd is fermented milk rich in probiotics, calcium, and protein. It supports gut health and digestion.",
         benefits: ["Rich in probiotics", "Supports gut health", "High in calcium", "Aids digestion", "Boosts immunity"],
         howToEat: ["Eat plain", "Make raita", "Add to smoothies", "Use in marinades"],
@@ -214,6 +236,7 @@ const DATA = {
       { 
         name: "Paneer", 
         emoji: "🧀",
+        image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
         description: "Paneer is fresh cheese made from milk, rich in protein and calcium. It's a vegetarian protein staple.",
         benefits: ["High in protein", "Rich in calcium", "Supports bone health", "Good for muscles", "Low-carb option"],
         howToEat: ["Paneer curry", "Grilled paneer", "Paneer bhurji", "Add to wraps"],
@@ -222,6 +245,7 @@ const DATA = {
       { 
         name: "Buttermilk", 
         emoji: "🥛",
+        image: "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400&h=300&fit=crop",
         description: "Buttermilk (chaas) is a refreshing probiotic drink that aids digestion and keeps you hydrated.",
         benefits: ["Rich in probiotics", "Very hydrating", "Aids digestion", "Low in calories", "Cooling effect"],
         howToEat: ["Drink plain", "Add spices (cumin, ginger)", "After meals", "Summer cooler"],
@@ -237,6 +261,7 @@ const DATA = {
       { 
         name: "Chips", 
         emoji: "🍟",
+        image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400&h=300&fit=crop",
         description: "Chips are ultra-processed, high in unhealthy fats, salt, and calories. They provide empty calories with no nutrients.",
         harms: ["Very high in calories", "Loaded with unhealthy fats", "High sodium content", "No nutritional value", "Addictive"],
         alternatives: ["Roasted makhana", "Air-popped popcorn", "Roasted chickpeas", "Vegetable sticks"],
@@ -245,6 +270,7 @@ const DATA = {
       { 
         name: "Sodas", 
         emoji: "🥤",
+        image: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&h=300&fit=crop",
         description: "Sodas are sugar-loaded drinks that spike blood sugar and provide zero nutrition. They increase diabetes and obesity risk.",
         harms: ["Very high in sugar", "Empty calories", "Spikes blood sugar", "Damages teeth", "Increases obesity risk"],
         alternatives: ["Plain water", "Lemon water", "Coconut water", "Herbal tea"],
@@ -253,6 +279,7 @@ const DATA = {
       { 
         name: "Pastries", 
         emoji: "🧁",
+        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop",
         description: "Pastries are made with refined flour, sugar, and unhealthy fats (trans fats). They spike blood sugar rapidly.",
         harms: ["High in refined sugar", "Made with refined flour", "Trans fats", "Spikes blood sugar", "Weight gain"],
         alternatives: ["Homemade whole wheat cookies", "Fruit with yogurt", "Dates", "Homemade laddoos"],
@@ -261,13 +288,14 @@ const DATA = {
       { 
         name: "Fried Fast Food", 
         emoji: "🍔",
+        image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400&h=300&fit=crop",
         description: "Deep-fried fast food is extremely high in unhealthy fats, calories, and sodium. It increases heart disease risk.",
         harms: ["Very high in calories", "Unhealthy trans fats", "High sodium", "Increases cholesterol", "Heart disease risk"],
         alternatives: ["Grilled chicken", "Homemade burgers", "Baked fries", "Wraps with veggies"],
         pcod: "Terrible for PCOD - high in unhealthy fats and contributes to weight gain."
       }
     ],
-    tips: ["Limit to once-a-week treat.", "Bake/air-fry instead of deep fry.", "Drink water before cravings."]
+    tips: ["⚠️ Avoid completely for best health.", "❌ Not recommended for PCOD/weight management.", "🚫 High in unhealthy fats, sugar, and empty calories."]
   },
 };
 
@@ -303,39 +331,59 @@ export default function Category() {
           background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
           border: '2px solid #e2e8f0',
           borderRadius: 20,
-          padding: 32,
-          textAlign: 'center',
+          overflow: 'hidden',
           marginBottom: 32,
           boxShadow: '0 4px 16px rgba(0,0,0,0.06)'
         }}>
           <div style={{
-            fontSize: 96,
-            marginBottom: 16,
-            filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.1))',
-            animation: 'bounce 0.6s ease-out'
+            width: '100%',
+            height: 280,
+            overflow: 'hidden',
+            position: 'relative'
           }}>
-            {selectedItem.emoji}
+            <img 
+              src={selectedItem.image} 
+              alt={selectedItem.name}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)',
+              padding: '60px 32px 24px',
+              color: 'white'
+            }}>
+              <h2 style={{
+                fontSize: 36,
+                fontWeight: 800,
+                margin: 0,
+                color: 'white',
+                textShadow: '0 2px 8px rgba(0,0,0,0.3)'
+              }}>
+                {selectedItem.name}
+              </h2>
+            </div>
           </div>
-          <h2 style={{
-            fontSize: 36,
-            fontWeight: 800,
-            margin: '0 0 12px 0',
-            background: 'linear-gradient(135deg, #0a58ca, #5b8def)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
+          <div style={{
+            padding: 32,
+            textAlign: 'center'
           }}>
-            {selectedItem.name}
-          </h2>
-          <p style={{
-            color: '#64748b',
-            fontSize: 17,
-            lineHeight: 1.6,
-            maxWidth: 600,
-            margin: '0 auto'
-          }}>
-            {selectedItem.description}
-          </p>
+            <p style={{
+              color: '#64748b',
+              fontSize: 17,
+              lineHeight: 1.6,
+              maxWidth: 600,
+              margin: '0 auto'
+            }}>
+              {selectedItem.description}
+            </p>
+          </div>
         </div>
 
         {/* Benefits Section */}
@@ -557,12 +605,9 @@ export default function Category() {
         <Link to="/lifestyle" className="link" style={{marginBottom: 16, display: 'inline-flex'}}>
           ← Back to Lifestyle
         </Link>
-        <div style={{display: 'flex', alignItems: 'center', gap: 16, marginTop: 16}}>
-          <div style={{fontSize: 64}}>{info.emoji}</div>
-          <div>
-            <h2 style={{margin: 0}}>{info.title}</h2>
-            <p style={{color: '#6b7280', margin: '4px 0 0 0'}}>Click on any item to learn more</p>
-          </div>
+        <div style={{marginTop: 16}}>
+          <h2 style={{margin: 0, fontSize: 32, fontWeight: 800, color: '#0a58ca'}}>{info.title}</h2>
+          <p style={{color: '#6b7280', margin: '8px 0 0 0', fontSize: 16}}>Click on any item to learn more</p>
         </div>
       </div>
 
@@ -573,15 +618,17 @@ export default function Category() {
         marginBottom: 32,
         maxWidth: 900
       }}>
-        {info.items.map((item, idx) => (
+        {info.items.map((item, idx) => {
+          const isJunk = slug === 'junk';
+          return (
           <button
             key={item.name}
             onClick={() => setSelectedItem(item)}
             style={{
-              background: 'white',
-              border: '2px solid #e5e7eb',
+              background: isJunk ? '#fff5f5' : 'white',
+              border: isJunk ? '2px solid #fca5a5' : '2px solid #e5e7eb',
               borderRadius: 16,
-              padding: 16,
+              padding: 0,
               cursor: 'pointer',
               textAlign: 'center',
               transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -590,51 +637,91 @@ export default function Category() {
               animationDelay: `${idx * 0.05}s`
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.borderColor = '#3b82f6';
+              e.currentTarget.style.borderColor = isJunk ? '#ef4444' : '#3b82f6';
               e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
-              e.currentTarget.style.boxShadow = '0 12px 28px rgba(59, 130, 246, 0.15)';
+              e.currentTarget.style.boxShadow = isJunk ? '0 12px 28px rgba(239, 68, 68, 0.15)' : '0 12px 28px rgba(59, 130, 246, 0.15)';
             }}
             onMouseOut={(e) => {
-              e.currentTarget.style.borderColor = '#e5e7eb';
+              e.currentTarget.style.borderColor = isJunk ? '#fca5a5' : '#e5e7eb';
               e.currentTarget.style.transform = 'translateY(0) scale(1)';
               e.currentTarget.style.boxShadow = 'none';
             }}
           >
             <div style={{
-              fontSize: 56,
-              marginBottom: 12,
-              filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.1))'
+              width: '100%',
+              height: 140,
+              overflow: 'hidden',
+              borderRadius: '14px 14px 0 0',
+              position: 'relative'
             }}>
-              {item.emoji}
+              <img 
+                src={item.image} 
+                alt={item.name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  transition: 'transform 0.3s ease',
+                  filter: isJunk ? 'grayscale(20%) brightness(0.9)' : 'none'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.1)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              />
+              {isJunk && (
+                <div style={{
+                  position: 'absolute',
+                  top: 8,
+                  right: 8,
+                  background: '#ef4444',
+                  color: 'white',
+                  fontSize: 18,
+                  width: 28,
+                  height: 28,
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 700,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
+                }}>
+                  ⚠
+                </div>
+              )}
             </div>
             <div style={{
+              padding: 16,
               fontSize: 15,
               fontWeight: 600,
-              color: '#1f2937',
+              color: isJunk ? '#991b1b' : '#1f2937',
               letterSpacing: '-0.01em'
             }}>
               {item.name}
             </div>
           </button>
-        ))}
+        );
+        })}
       </div>
 
       <div style={{
-        background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)',
+        background: slug === 'junk' ? 'linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%)' : 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)',
         borderRadius: 16,
         padding: 24,
-        border: '1px solid #bae6fd'
+        border: slug === 'junk' ? '2px solid #fca5a5' : '1px solid #bae6fd'
       }}>
         <h3 style={{
           fontSize: 18,
           fontWeight: 700,
-          color: '#0369a1',
+          color: slug === 'junk' ? '#991b1b' : '#0369a1',
           margin: '0 0 16px 0',
           display: 'flex',
           alignItems: 'center',
           gap: 8
         }}>
-          💡 Quick Tips
+          {slug === 'junk' ? '⚠️ Health Warnings' : '💡 Quick Tips'}
         </h3>
         <ul style={{
           listStyle: 'none',
@@ -650,16 +737,13 @@ export default function Category() {
               background: 'white',
               borderRadius: 10,
               fontSize: 14,
-              color: '#334155',
+              color: slug === 'junk' ? '#991b1b' : '#334155',
               boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
               display: 'flex',
-              alignItems: 'center',
-              gap: 10
+              alignItems: 'flex-start',
+              gap: 10,
+              fontWeight: slug === 'junk' ? 600 : 400
             }}>
-              <span style={{
-                fontSize: 16,
-                flexShrink: 0
-              }}>✓</span>
               <span>{t}</span>
             </li>
           ))}

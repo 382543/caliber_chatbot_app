@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Mic, MicOff } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
+const API_BASE = 
+  import.meta.env?.VITE_API_URL?.replace(/\/$/, "") || "http://localhost:5000";
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);

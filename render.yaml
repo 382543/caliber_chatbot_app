@@ -1,0 +1,24 @@
+services:
+  # Integrated Full-Stack Application (Backend + Frontend)
+  - type: web
+    name: caliber-chatbot-fullstack
+    runtime: python
+    buildCommand: |
+      # Install Python dependencies
+      pip install -r requirements.txt
+      # Install Node.js dependencies and build frontend
+      cd caliber_chatbot.app && npm install && npm run build && cd ..
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: NODE_VERSION
+        value: 20.10.0
+      - key: GEMINI_API_KEY
+        sync: false  # Add this in Render dashboard
+      - key: RENDER
+        value: "true"
+    plan: starter  # Recommended for ML inference (Free tier may timeout)
+    healthCheckPath: /health
+    autoDeploy: true
+    region: oregon  # Choose closest to your users

@@ -6,7 +6,7 @@ const CATEGORIES = [
   { 
     slug: "vegetables", 
     label: "Vegetables", 
-    emoji: "🥗", // Salad bowl – healthy, fresh, friendly   
+    image: "https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=200&h=200&fit=crop",
     tone: "green",  
     desc: "Leafy greens, roots, crucifers", 
     tags:["PCOD-friendly","Low GI"] 
@@ -14,7 +14,7 @@ const CATEGORIES = [
   { 
     slug: "fruits",     
     label: "Fruits",     
-    emoji: "🍓", // Strawberry – sweet, colorful, appealing  
+    image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=200&h=200&fit=crop",
     tone: "pink",   
     desc: "Berries, citrus, tropical",     
     tags:["Antioxidants"] 
@@ -22,7 +22,7 @@ const CATEGORIES = [
   { 
     slug: "proteins",   
     label: "Proteins",   
-    emoji: "🍗", // Chicken leg – recognizable protein  
+    image: "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=200&h=200&fit=crop",
     tone: "amber",  
     desc: "Pulses, eggs, lean meats",      
     tags:["High Protein"] 
@@ -30,7 +30,7 @@ const CATEGORIES = [
   { 
     slug: "grains",     
     label: "Grains",     
-    emoji: "🌾", // Wheat stalk – perfect symbol  
+    image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=200&h=200&fit=crop",
     tone: "gold",   
     desc: "Rice, oats, quinoa, millets",   
     tags:["Whole grain","Low GI"] 
@@ -38,7 +38,7 @@ const CATEGORIES = [
   { 
     slug: "dairy",      
     label: "Dairy",      
-    emoji: "🥛", // Milk glass – simple, clear  
+    image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=200&h=200&fit=crop",
     tone: "blue",   
     desc: "Milk, curd, paneer, cheese",    
     tags:["Calcium"] 
@@ -46,7 +46,7 @@ const CATEGORIES = [
   { 
     slug: "junk",       
     label: "Junk",       
-    emoji: "🍟", // Fries – universal junk food symbol  
+    image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=200&h=200&fit=crop",
     tone: "red",    
     desc: "Fried & ultra-processed",       
     tags:["Limit"] 
@@ -114,7 +114,9 @@ export default function Lifestyle() {
             style={{ animationDelay: `${i * 70}ms` }}
           >
             <span className="ring" aria-hidden="true"></span>
-            <span className="emoji">{c.emoji}</span>
+            <div className="card-image">
+              <img src={c.image} alt={c.label} />
+            </div>
             <h4>{c.label}</h4>
             <p>{c.desc}</p>
             <div className="mini-tags">

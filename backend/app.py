@@ -61,18 +61,25 @@ TRAIN_PIPELINE = "div255"     # "div255" or "effnet"
 
 # ---- model discovery
 BASE_DIR = Path(__file__).resolve().parent
-CANDIDATES = [
-    BASE_DIR / "food_classification_model_fixed.keras",
-    BASE_DIR / "food_classification_model.keras",
-    BASE_DIR / "food_classification_model.h5",
-    BASE_DIR / "model.keras",
-    BASE_DIR / "model.h5",
-    BASE_DIR / "saved_model",
-    BASE_DIR / "models" / "model.keras",
-    BASE_DIR / "models" / "model.h5",
-    BASE_DIR / "models" / "saved_model",
-]
-MODEL_PATH = next((p for p in CANDIDATES if p.exists()), None)
+
+# Check for environment variable first (for Render deployment)
+env_model_path = os.getenv("MODEL_PATH")
+if env_model_path and Path(env_model_path).exists():
+    MODEL_PATH = Path(env_model_path)
+else:
+    # Fall back to local search
+    CANDIDATES = [
+        BASE_DIR / "food_classification_model_fixed.keras",
+        BASE_DIR / "food_classification_model.keras",
+        BASE_DIR / "food_classification_model.h5",
+        BASE_DIR / "model.keras",
+        BASE_DIR / "model.h5",
+        BASE_DIR / "saved_model",
+        BASE_DIR / "models" / "model.keras",
+        BASE_DIR / "models" / "model.h5",
+        BASE_DIR / "models" / "saved_model",
+    ]
+    MODEL_PATH = next((p for p in CANDIDATES if p.exists()), None)
 if MODEL_PATH is None:
     raise RuntimeError(
         "Model file/folder not found next to app.py. "
@@ -85,10 +92,10 @@ print(f"Loading model from: {MODEL_PATH}")
 try:
     # Try direct load first
     model = keras.models.load_model(MODEL_PATH, compile=False, safe_mode=False)
-    print("✓ Model loaded successfully")
+    print("[OK] Model loaded successfully")
 except (ValueError, OSError) as e:
     error_msg = str(e)
-    print(f"⚠ Direct load failed: {error_msg}")
+    print(f"[WARNING] Direct load failed: {error_msg}")
     
     # Rebuild the exact architecture from training (EfficientNetB1 as shown in notebook)
     print("Rebuilding model with correct architecture (EfficientNetB1)...")
@@ -106,8 +113,8 @@ except (ValueError, OSError) as e:
     predictions = keras.layers.Dense(len(class_names), activation='softmax')(x)
     
     model = Model(inputs=base_model.input, outputs=predictions)
-    print("✓ Rebuilt model with EfficientNetB1 architecture")
-    print("⚠ Model has random weights (not trained)")
+    print("[OK] Rebuilt model with EfficientNetB1 architecture")
+    print("[WARNING] Model has random weights (not trained)")
     print("  To get accurate predictions: Re-export your trained model from notebook")
 
 # ---- resolve input geometry & sanity checks
