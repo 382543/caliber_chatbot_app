@@ -15,9 +15,6 @@ npm-debug.log*
 # Environment
 .env
 
-# Large model files (use Git LFS or host separately)
-backend/food_classification_model.keras
-
 # Generated files
 *.png
 *.jpg
