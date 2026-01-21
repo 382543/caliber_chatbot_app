@@ -1,0 +1,92 @@
+# ============================================================================
+# Caliber Health - Full-Stack Deployment Configuration for Render.com
+# ============================================================================
+#
+# PROJECT STRUCTURE:
+# ------------------
+# /
+# ├── main.py                    ← Entry point (launches everything)
+# ├── requirements.txt           ← Python dependencies
+# ├── render.yaml               ← This file (deployment config)
+# │
+# ├── backend/                  ← FastAPI Backend Service
+# │   ├── app.py               ← FastAPI routes + ML model + Gemini chatbot
+# │   └── food_classification_model.keras  ← 77MB trained model
+# │
+# └── frontend/                ← React Frontend
+#     ├── src/                 ← React source code
+#     ├── dist/                ← Built frontend (auto-generated)
+#     └── package.json         ← Node.js dependencies
+#
+# WHAT RUNS WHERE:
+# ----------------
+# • main.py          → Application launcher (imports backend/app.py)
+# • backend/app.py   → FastAPI server with:
+#                       - POST /predict → Food classification ML model
+#                       - POST /api/chat → Gemini AI health chatbot
+#                       - GET /health → Health check endpoint
+# • React Frontend   → Built and served as static files from /dist
+#
+# DEPLOYMENT FLOW:
+# ----------------
+# 1. Build Phase: Install Python + Node deps, build React app
+# 2. Start Phase: Run main.py → imports backend/app.py → serves frontend
+# 3. Result: Single web service on https://your-app.onrender.com
+#
+# ============================================================================
+
+services:
+  - type: web
+    name: caliber-health-app
+    runtime: python
+    
+    # ========== BUILD COMMAND ==========
+    # Installs all dependencies and builds the React frontend
+    buildCommand: |
+      echo "📦 Installing Python dependencies..."
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      
+      echo "📦 Installing Node.js dependencies and building React frontend..."
+      cd frontend
+      npm install
+      npm run build
+      cd ..
+      
+      echo "✅ Build completed successfully!"
+    
+    # ========== START COMMAND ==========
+    # Runs main.py which launches backend/app.py (FastAPI + ML + Chatbot)
+    startCommand: python main.py
+    
+    # ========== ENVIRONMENT VARIABLES ==========
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      
+      - key: NODE_VERSION
+        value: 20.10.0
+      
+      # ⚠️ IMPORTANT: Add this in Render Dashboard (Environment tab)
+      # Get your key from: https://aistudio.google.com/app/apikey
+      - key: GEMINI_API_KEY
+        sync: false  # Set manually in dashboard for security
+      
+      - key: RENDER
+        value: "true"
+    
+    # ========== CONFIGURATION ==========
+    plan: starter  # Recommended: Starter ($7/mo) - Free tier may timeout with ML model
+    healthCheckPath: /health
+    autoDeploy: true  # Auto-deploy on git push
+    region: oregon    # Choose closest to your users (oregon, frankfurt, singapore, etc.)
+
+# ============================================================================
+# DEPLOYMENT CHECKLIST:
+# ============================================================================
+# [ ] Push code to GitHub/GitLab
+# [ ] Connect repository in Render.com dashboard
+# [ ] Add GEMINI_API_KEY in Environment tab
+# [ ] Deploy and wait ~5-10 minutes for build
+# [ ] Access your app at https://caliber-health-app.onrender.com
+# ============================================================================

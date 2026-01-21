@@ -27,11 +27,11 @@ All endpoints run on `http://localhost:5000`
 
 ## Frontend Setup
 
-The frontend (in `caliber_chatbot.app`) is already configured to use port 5000.
+The frontend (in `frontend`) is already configured to use port 5000.
 
 Start frontend:
 ```cmd
-cd ..\caliber_chatbot.app
+cd ..\frontend
 npm install
 npm run dev
 ```

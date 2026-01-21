@@ -1,47 +1,91 @@
-# Caliber Food Classification & Health Chatbot
+# Caliber - Food Classification & Health Chatbot
 
-Full-stack application with food image classification and health chatbot powered by AI.
+## 🚀 Quick Start (Integrated Setup)
 
-## Architecture
+### Prerequisites
+- **Python 3.11+**
+- **Node.js 20+** and npm
+- Git
 
-- **Backend**: FastAPI (Python) - Port 5000
-  - Food classification using EfficientNetV2
-  - Health chatbot using Google Gemini API
-  
-- **Frontend**: React + Vite - Port 5173/5174
-  - Camera page for food detection
-  - Health chatbot widget
-  - Lifestyle tracking
+### 🎯 Run Full Application (One Command)
 
-## Quick Start
-
-### 1. Backend Setup (Terminal 1)
-
-```cmd
-cd backend
-pip install -r requirements.txt
-python -m uvicorn app:app --host 0.0.0.0 --port 5000
-```
-
-**Or use the startup script:**
-```cmd
-cd backend
+#### Windows:
+```bash
 start.bat
 ```
 
-Backend will run on: `http://localhost:5000`
-
-### 2. Frontend Setup (Terminal 2)
-
-```cmd
-cd caliber_chatbot.app
-npm install
-npm run dev
+#### Linux/Mac:
+```bash
+chmod +x start.sh
+./start.sh
 ```
 
-**Or use the startup script:**
-```cmd
-cd caliber_chatbot.app
+#### Or manually:
+```bash
+# Activate virtual environment
+.venv\Scripts\activate  # Windows
+source .venv/bin/activate  # Linux/Mac
+
+# Run integrated app
+python main.py
+```
+
+The application will:
+1. ✅ Build the React frontend automatically
+2. ✅ Start the FastAPI backend with ML model
+3. ✅ Serve both on http://localhost:5000
+4. ✅ Open your browser automatically
+
+---
+
+## 📦 Project Structure
+
+```
+caliber/
+├── main.py                         # 🔥 MAIN ENTRY POINT (Launcher) - Run this!
+├── start.bat                       # Windows start script
+├── start.sh                        # Linux/Mac start script
+├── requirements.txt                # Python dependencies
+├── render.yaml                     # Render.com deployment config
+│
+├── backend/                        # FastAPI Backend
+│   ├── app.py                     # FastAPI API routes & ML inference & Chatbot
+│   ├── food_classification_model.keras  # Trained model (77MB)
+│   └── .env                       # API keys (GEMINI_API_KEY)
+│
+└── frontend/                      # React Frontend
+    ├── src/                       # React components
+    │   ├── pages/
+    │   │   ├── Camera.jsx        # Food detection page
+    │   │   ├── ChatWidget.jsx    # Health chatbot
+    │   │   └── Lifestyle.jsx     # Food categories
+    │   └── App.jsx               # Main app
+    ├── dist/                      # Built frontend (auto-generated)
+    └── package.json              # Node dependencies
+```
+
+---
+
+## 🛠️ Manual Setup (If needed)
+
+### 1. Install Backend Dependencies
+```bash
+# Create virtual environment
+python -m venv .venv
+
+# Activate it
+.venv\Scripts\activate  # Windows
+source .venv/bin/activate  # Linux/Mac
+
+# Install Python packages
+pip install -r requirements.txt
+```
+
+### 2. Install Frontend Dependencies
+```bash
+cd frontend
+npm install
+cd ..
 start.bat
 ```
 
@@ -70,7 +114,7 @@ sushi/
 │   ├── .env            # Environment variables
 │   └── food_classification_model.keras
 │
-├── caliber_chatbot.app/ # React frontend (Port 5173)
+├── frontend/            # React frontend (Port 5173)
 │   ├── src/
 │   │   ├── pages/
 │   │   │   ├── Camera.jsx      # Food detection page
