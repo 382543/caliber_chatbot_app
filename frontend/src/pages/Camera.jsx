@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 
 const API_BASE =
-  import.meta.env?.VITE_API_URL?.replace(/\/$/, "") || "http://localhost:5000";
+  import.meta.env?.VITE_API_URL?.replace(/\/$/, "") || 
+  "https://caliber-chatbot-app.onrender.com";
 
 export default function Camera() {
   const [image, setImage] = useState(null);
