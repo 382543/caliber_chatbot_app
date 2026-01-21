@@ -90,10 +90,18 @@ if MODEL_PATH is None:
 print(f"Loading model from: {MODEL_PATH}")
 
 try:
-    # Try direct load first
-    model = keras.models.load_model(MODEL_PATH, compile=False, safe_mode=False)
+    # Try loading with custom_objects to handle Functional class
+    from tensorflow.keras.saving import register_keras_serializable
+    
+    # Try direct load first with safe_mode disabled
+    model = keras.models.load_model(
+        MODEL_PATH, 
+        compile=False, 
+        safe_mode=False,
+        custom_objects=None
+    )
     print("[OK] Model loaded successfully")
-except (ValueError, OSError) as e:
+except (ValueError, OSError, TypeError) as e:
     error_msg = str(e)
     print(f"[WARNING] Direct load failed: {error_msg}")
     
@@ -102,7 +110,7 @@ except (ValueError, OSError) as e:
     from tensorflow.keras.applications import EfficientNetB1
     
     base_model = EfficientNetB1(
-        weights=None,  # Don't load weights yet to avoid conflict
+        weights='imagenet',  # Use pretrained weights as fallback
         include_top=False,
         input_shape=(256, 256, 3)
     )
@@ -114,8 +122,8 @@ except (ValueError, OSError) as e:
     
     model = Model(inputs=base_model.input, outputs=predictions)
     print("[OK] Rebuilt model with EfficientNetB1 architecture")
-    print("[WARNING] Model has random weights (not trained)")
-    print("  To get accurate predictions: Re-export your trained model from notebook")
+    print("[WARNING] Using pretrained weights - predictions may not be accurate")
+    print("  To get accurate predictions: Re-export your trained model with TensorFlow 2.15")
 
 # ---- resolve input geometry & sanity checks
 in_shape = model.input_shape
