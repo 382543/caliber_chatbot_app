@@ -56,8 +56,8 @@ services:
       echo "✅ Build completed successfully!"
     
     # ========== START COMMAND ==========
-    # Runs main.py which launches backend/app.py (FastAPI + ML + Chatbot)
-    startCommand: python main.py
+    # Runs backend/app.py (FastAPI + ML + Chatbot)
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT
     
     # ========== ENVIRONMENT VARIABLES ==========
     envVars:
